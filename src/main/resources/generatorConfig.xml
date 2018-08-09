@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<classPathEntry
+		location="C:/Users/necuser/.m2/repository/org/postgresql/postgresql/9.4.1212.jre7/postgresql-9.4.1212.jre7.jar" />
+	<context id="context2"
+		targetRuntime="com.fastretailing.dcp.demoFor.codegene.mybatis3.IntrospectedTableMyBatis3Impl">
+		<plugin type="com.fastretailing.dcp.demoFor.LombokPlugin">
+			<!-- enable annotations -->
+		</plugin>
+		<plugin type="com.fastretailing.dcp.demoFor.ExampleClassNamePlugin">
+			<!-- enable annotations -->
+		</plugin>
+		<commentGenerator>
+			<property name="suppressDate" value="true" />
+		</commentGenerator>
+		<!-- JDBCの設定です (1) -->
+		<jdbcConnection driverClass="org.postgresql.Driver"
+			connectionURL="jdbc:postgresql://172.31.11.63:5432/TecDB?currentSchema=inventory"
+			userId="nec" password="nec" />
+
+		<javaTypeResolver type="com.fastretailing.dcp.demoFor.JavaTypeResolverImpl">
+		</javaTypeResolver>
+
+
+
+		<!-- 自動生成するエンティティの設定です (2) -->
+		<javaModelGenerator targetPackage="com.fastretailing.dcp.storeinventory.common.entity"
+			targetProject="src/main/java/" />
+		<sqlMapGenerator targetPackage="com.fastretailing.dcp.storeinventory.common.repository"
+			targetProject="src/main/resources/" />
+		<javaClientGenerator targetPackage="com.fastretailing.dcp.storeinventory.common.repository"
+			targetProject="src/main/java/" type="XMLMAPPER" />
+
+		<!-- 生成対象のテーブルです（3) -->
+		<table  tableName="m_trans_store_code" domainObjectName="TransferStoreCodeMaster" />
+		<table  tableName="m_acting_headquarters" domainObjectName="ActingHeadquartersMaster" />
+		<table  tableName="m_all_transfer_out_instruction"
+			domainObjectName="AllTransferOutInstructionMaster" />
+		<table  tableName="m_color_size" domainObjectName="ColorSizeMaster" />
+		<table  tableName="m_general_purpose" domainObjectName="GeneralPurposeMaster" />
+		<table  tableName="m_control_number" domainObjectName="ControlNumberMaster" />
+		<table  tableName="m_countryconfig" domainObjectName="CountryConfigMaster" />
+		<table  tableName="m_flyer_instruction" domainObjectName="FlyerInstructionMaster" />
+		<table  tableName="m_flyer_promotion" domainObjectName="FlyerPromotionMaster" />
+		<table  tableName="m_g_class" domainObjectName="GClassMaster" />
+		<table  tableName="m_g_class_link" domainObjectName="GClassLinkMaster" />
+		<table  tableName="m_genelar_code" domainObjectName="GeneralCodeMaster" />
+		<table  tableName="m_inventory_confirm_loss_info"
+			domainObjectName="InventoryConfirmLossInfoMaster" />
+		<table  tableName="m_item" domainObjectName="ItemMaster" />
+		<table  tableName="m_class" domainObjectName="ClassMaster" />
+		<table  tableName="m_dept" domainObjectName="DepartmentMaster" />
+		<table  tableName="m_subclass" domainObjectName="SubclassMaster" />
+		<table  tableName="m_item_level_1" domainObjectName="ItemLevel1Master" />
+		<table  tableName="m_item_level_2" domainObjectName="ItemLevel2Master" />
+		<table  tableName="m_item_list_detail" domainObjectName="ItemListDetailMaster" />
+		<table  tableName="m_item_list_detail_backup" domainObjectName="ItemListDetailBackupMaster" />
+		<table  tableName="m_item_list_head" domainObjectName="ItemListHeaderMaster" />
+		<table  tableName="m_item_list_head_backup" domainObjectName="ItemListHeaderBackupMaster" />
+		<table  tableName="m_item_pack" domainObjectName="ItemPackMaster" />
+		<table  tableName="m_purge_item" domainObjectName="PurgeItemMaster" />
+		<table  tableName="m_pack_item" domainObjectName="PackItemMaster" />
+		<table  tableName="m_price_change_instruction" domainObjectName="PriceChangeInstructionMaster" />
+		<table  tableName="m_priority_select_location" domainObjectName="PrioritySelectLocationMaster" />
+		<table  tableName="m_processing_status_management"
+			domainObjectName="ProcessingStatusManagementMaster" />
+		<table  tableName="m_report_management" domainObjectName="ReportManagementMaster" />
+		<table  tableName="m_report_management_by_country"
+			domainObjectName="ReportManagementByCountryMaster" />
+		<table  tableName="m_restpassword" domainObjectName="RestPasswordMaster" />
+		<table  tableName="m_setting_management" domainObjectName="SettingManagementMaster" />
+		<table  tableName="m_setting_management_business"
+			domainObjectName="SettingManagementBusinessMaster" />
+		<table  tableName="m_shipping_company" domainObjectName="ShippingCompanyMaster" />
+		<table  tableName="m_single_item_loss_confirm_info"
+			domainObjectName="SingleItemLossConfirmInfoMaster" />
+		<table  tableName="m_sku_transfer_out_instruction"
+			domainObjectName="SkuTransferOutInstructionMaster" />
+		<table  tableName="m_store_control" domainObjectName="StoreControlMaster" />
+		<table  tableName="m_store" domainObjectName="StoreMaster" />
+		<table  tableName="m_store_group_map" domainObjectName="StoreGroupMapMaster" />
+		<table  tableName="m_supplier" domainObjectName="SupplierMaster" />
+		<table  tableName="m_table_id_change" domainObjectName="TableIdChangeMaster" />
+		<table  tableName="m_tax" domainObjectName="TaxMaster" />
+		<table  tableName="m_tsf_aggregation_instruction"
+			domainObjectName="TsfAggregationInstructionMaster" />
+		<table  tableName="m_type" domainObjectName="TypeMaster" />
+		<table  tableName="m_uri_management" domainObjectName="UriManagementMaster" />
+		<table  tableName="m_warehouse" domainObjectName="WarehouseMaster" />
+		<table  tableName="m_warehousing_accept" domainObjectName="WarehousingAcceptMaster" />
+		<table  tableName="t_common_tag" domainObjectName="CommonTag" />
+		<table  tableName="t_day_scm_stock_level1" domainObjectName="DayScmStockLevel1" />
+		<table  tableName="t_day_scm_stock_level3" domainObjectName="DayScmStockLevel3" />
+		<table  tableName="t_delivery_expected_detail" domainObjectName="DeliveryExpectedDetail" />
+		<table  tableName="t_delivery_expected_detail_pg"
+			domainObjectName="DeliveryExpectedDetailPurge" />
+		<table  tableName="t_delivery_expected_head" domainObjectName="DeliveryExpectedHeader" />
+		<table  tableName="t_delivery_expected_head_pg" domainObjectName="DeliveryExpectedHeaderPurge" />
+		<table  tableName="t_delivery_expected_reference"
+			domainObjectName="DeliveryExpectedReference" />
+		<table  tableName="t_delivery_notice" domainObjectName="DeliveryNotice" />
+		<table  tableName="t_epc_management" domainObjectName="EpcManagement" />
+		<table  tableName="t_g_class_delivery_expected"
+			domainObjectName="GClassDeliveryExcepted" />
+		<table  tableName="t_inventory" domainObjectName="Inventory" />
+		<table  tableName="t_inventory_backup" domainObjectName="InventoryBackup" />
+		<table  tableName="t_inventory_delete" domainObjectName="InventoryDelete" />
+		<table  tableName="t_inventory_detachment_summary"
+			domainObjectName="InventoryDetachmentSummary" />
+		<table  tableName="t_inventory_expected_instruction"
+			domainObjectName="InventoryExceptedInstruction" />
+		<table  tableName="t_inventory_loss_sum_detail" domainObjectName="InventoryLossSummaryDetail" />
+		<table  tableName="t_inventory_loss_sum_head" domainObjectName="InventoryLossSummaryHeader" />
+		<table  tableName="t_inventory_sum" domainObjectName="InventorySummary" />
+		<table  tableName="t_inventory_theory_stock" domainObjectName="InventoryTheoryStock" />
+		<table  tableName="t_item_warehouse_stock_level1"
+			domainObjectName="ItemWarehouseStockLevel1" />
+		<table  tableName="t_item_warehouse_stock_level3"
+			domainObjectName="ItemWarehouseStockLevel3" />
+		<table  tableName="t_just_before_inventory" domainObjectName="JustBeforeInventory" />
+		<table  tableName="t_just_before_receive_data" domainObjectName="JustBeforeReceiveData" />
+		<table  tableName="t_just_bf_single_item_inventory"
+			domainObjectName="JustBeforeSingleItemInventory" />
+		<table  tableName="t_lot_number_mgm" domainObjectName="LotNumberManagement" />
+		<table  tableName="t_pot_forward_history_file" domainObjectName="PotForwardHistoryFile" />
+		<table  tableName="t_pot_inventory_sort_data" domainObjectName="PotInventorySortData" />
+		<table  tableName="t_pre_reg_tag_printing_mgmt" domainObjectName="PreRegistrationTagPrintingManagement" />
+		<table  tableName="t_prev_day_before_ystd_stock"
+			domainObjectName="PreviousDayBeforeYesterdayStock" />
+		<table  tableName="t_previous_day_stock_information"
+			domainObjectName="PreviousDayStockInformation" />
+		<table  tableName="t_receive_error" domainObjectName="ReceiveError" />
+		<table  tableName="t_rfid_inv_unavailable_for_sale"
+			domainObjectName="RfidInventoryUnavailableForSale" />
+		<table  tableName="t_rfid_single_upd_inventory" domainObjectName="RfidSingleUpdateInventory" />
+		<table  tableName="t_rfid_tag_print_seq_mgmt" domainObjectName="RfidTagPrintSequenceManagement" />
+		<table  tableName="t_rfid_transfer_out_data" domainObjectName="RfidTransferOutData" />
+		<table  tableName="t_rfid_write_off_approval" domainObjectName="RfidWriteOffApproval" />
+		<table  tableName="t_single_item_inventory" domainObjectName="SingleItemInventory" />
+		<table  tableName="t_single_item_inventory_fix" domainObjectName="SingleItemInventoryFix" />
+		<table  tableName="t_stock_status_move" domainObjectName="StockStatusMove" />
+		<table  tableName="t_stockrefuse_delivery_expected"
+			domainObjectName="StockRefuseDeliveryExpected" />
+		<table  tableName="t_tag_printing_management" domainObjectName="TagPrintingManagement" />
+		<table  tableName="t_today_stock_information" domainObjectName="TodayStockInformation" />
+		<table  tableName="t_transfer_out_confirm_detail"
+			domainObjectName="TransferOutConfirmDetail" />
+		<table  tableName="t_transfer_out_confirm_head" domainObjectName="TransferOutConfirmHeader" />
+		<table  tableName="t_write_off_confirm_detail" domainObjectName="WriteOffConfirmDetail" />
+		
+	</context>
+</generatorConfiguration>
